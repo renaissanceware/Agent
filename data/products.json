@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-1.png",
+    "name": "iPhone 14 Pro",
+    "description": "Super Retina XDR display footnote Pro Motion technology",
+    "brand":"Apple",
+    "category": "Electronics",
+    "sku": "19472",
+    "price": "$999",
+    "qty": "665"
+  },
+  {
+    "id": 2,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-2.png",
+    "name": "Echo Dot (4th Gen)",
+    "description": "Echo Dot Smart speaker with Alexa",
+    "brand":"Alexa",
+    "category": "Electronics",
+    "sku": "72836",
+    "price": "$25.50",
+    "qty": "827"
+  },
+  {
+    "id": 3,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-3.png",
+    "name": "Dohioue Wall Clock",
+    "description": "Modern 10 Inch Battery Operated Wall Clocks",
+    "brand":"Swatch",
+    "category": "Accessories",
+    "sku": "29540",
+    "price": "$16.34",
+    "qty": "804"
+  },
+  {
+    "id": 4,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-4.png",
+    "name": "INZCOU Running Shoes",
+    "description": "Lightweight Tennis Shoes Non Slip Gym Workout Shoes",
+    "brand":"INZCOU",
+    "category": "Shoes",
+    "sku": "49402",
+    "price": "$36.98",
+    "qty": "528"
+  },
+  {
+    "id": 5,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-5.png",
+    "name": "Apple Watch Series 7",
+    "description": "Starlight Aluminum Case with Starlight Sport Band.",
+    "brand":"Apple",
+    "category": "Electronics",
+    "sku": "46658",
+    "price": "$799",
+    "qty": "851"
+  },
+  {
+    "id": 6,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-6.png",
+    "name": "Meta Quest 2",
+    "description": "Advanced All-In-One Virtual Reality Headset",
+    "brand":"Meta",
+    "category": "Games",
+    "sku": "57640",
+    "price": "$299",
+    "qty": "962"
+  },
+  {
+    "id": 7,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-7.png",
+    "name": "MacBook Pro 16",
+    "description": "Laptop M2 Pro chip with 12\u2011core CPU and 19\u2011core GPU",
+    "brand":"Apple",
+    "category": "Electronics",
+    "sku": "92885",
+    "price": "$2648.95",
+    "qty": "965"
+  },
+  {
+    "id": 8,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-8.png",
+    "name": "SAMSUNG Galaxy S22 Ultra",
+    "description": "Android Smartphone, 256GB, 8K Camera",
+    "brand":"SAMSUNG",
+    "category": "Electronics",
+    "sku": "75257",
+    "price": "$899",
+    "qty": "447"
+  },
+  {
+    "id": 9,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-9.png",
+    "name": "Air Jordan",
+    "description": "Air Jordan is a line of basketball shoes produced by Nike",
+    "brand":"Nike",
+    "category": "Shoes",
+    "sku": "31063",
+    "price": "$125",
+    "qty": "942"
+  },
+  {
+    "id": 10,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-10.png",
+    "name": "VISKABACKA",
+    "description": "Armchair, Skartofta black/light grey",
+    "brand":"LV",
+    "category": "Home Decor",
+    "sku": "91848",
+    "price": "$190.45",
+    "qty": "133"
+  },
+  {
+    "id": 11,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-11.png",
+    "name": "Nintendo Switch",
+    "description": "TV Mode, Tabletop Mode, Handheld Mode",
+    "brand":"Nintendo",
+    "category": "Games",
+    "sku": "52575",
+    "price": "$296.99",
+    "qty": "870"
+  },
+  {
+    "id": 12,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-12.png",
+    "name": "PlayStation 5",
+    "description": "Marvel at incredible graphics and experience",
+    "brand":"Sony",
+    "category": "Games",
+    "sku": "59551",
+    "price": "$499",
+    "qty": "145"
+  },
+  {
+    "id": 13,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-13.png",
+    "name": "Amazon Fire TV",
+    "description": "4K UHD smart TV, stream live TV without cable",
+    "brand":"Amazon",
+    "category": "Electronics",
+    "sku": "5829",
+    "price": "$263.49",
+    "qty": "587"
+  },
+  {
+    "id": 14,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-14.png",
+    "name": "Smiletag Ceramic Vase",
+    "description": "Modern Farmhouse Decor Vase Set of 3",
+    "brand":"Smiletag",
+    "category": "Home Decor",
+    "sku": "24456",
+    "price": "$34.99",
+    "qty": "310"
+  },
+  {
+    "id": 15,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-15.png",
+    "name": "Apple iPad",
+    "description": "10.2-inch Retina Display, 64GB",
+    "brand":"Apple",
+    "category": "Electronics",
+    "sku": "35946",
+    "price": "$248.39",
+    "qty": "468"
+  },
+  {
+    "id": 16,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-16.png",
+    "name": "BANGE Anti Theft Backpack",
+    "description": "Smart Business Laptop Fits 15.6 Inch Notebook",
+    "brand":"BANGE",
+    "category": "Office",
+    "sku": "41867",
+    "price": "$79.99",
+    "qty": "519"
+  },
+  {
+    "id": 17,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-17.png",
+    "name": "Xbox Series X/S",
+    "description": "Dual Controller Charger Station Dock",
+    "brand":"Microsoft",
+    "category": "Games",
+    "sku": "43224",
+    "price": "$49.99",
+    "qty": "787"
+  },
+  {
+    "id": 18,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-18.png",
+    "name": "Canon EOS Rebel T7",
+    "description": "18-55mm Lens | Built-in Wi-Fi | 24.1 MP CMOS Sensor",
+    "brand":"Canon",
+    "category": "Electronics, Camera",
+    "sku": "63474",
+    "price": "$399",
+    "qty": "810"
+  },
+  {
+    "id": 19,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-19.png",
+    "name": "Honiway Wall Mirror",
+    "description": "Decorative 12 inch Rustic Wood Mirror Sunburst Boho",
+    "brand":"Honiway",
+    "category": "Home Decor",
+    "sku": "15859",
+    "price": "$23.99",
+    "qty": "735"
+  },
+  {
+    "id": 20,
+    "image_url": "https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1/images/apps/ecommerce/product-20.png",
+    "name": "Tommaso Veloce Shoes",
+    "description": "Peloton Shoes Triathlon Road Bike Indoor Cycling",
+    "brand":"Tommaso Veloce",
+    "category": "Shoes",
+    "sku": "28844",
+    "price": "$922.09",
+    "qty": "294"
+  }
+]

@@ -1,0 +1,12 @@
+langchain
+langchain-openai==0.0.5
+flask
+requests
+beautifulsoup4
+python-dotenv
+openai>=1.10.0,<2.0.0
+pydantic>=1.10.12,<2.0.0
+langchain-community
+pandas
+sentence-transformers
+faiss-cpu
