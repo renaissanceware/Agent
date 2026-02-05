@@ -284,12 +284,12 @@
             box-shadow: var(--shadow-md);
         }
 
-        .chat-history-content {
+        .chat-history-item-content {
             flex: 1;
             min-width: 0;
         }
 
-        .chat-history-title {
+        .chat-history-item-title {
             font-size: 0.875rem;
             font-weight: 500;
             color: var(--text-primary);
@@ -299,12 +299,33 @@
             margin-bottom: 0.25rem;
         }
 
-        .chat-history-preview {
+        .chat-history-item-meta {
             font-size: 0.75rem;
             color: var(--text-tertiary);
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+        }
+
+        .chat-history-item-date {
+            display: block;
+        }
+
+        .chat-history-item-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .delete-conv-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-tertiary);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: all var(--transition-fast);
+        }
+
+        .delete-conv-btn:hover {
+            background: var(--danger-color);
+            color: white;
         }
 
         .main-content {
