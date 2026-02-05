@@ -178,7 +178,7 @@ def get_conversation_history(conversation_id):
         SELECT message_id, conversation_id, user_id, role, content, products, created_at
         FROM messages
         WHERE conversation_id = %s
-        ORDER BY created_at ASC
+        ORDER BY created_at ASC, role ASC
         """
         cursor.execute(get_messages, (conversation_id,))
         messages = cursor.fetchall()
