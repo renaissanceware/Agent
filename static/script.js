@@ -223,7 +223,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 chatMessages.innerHTML = '';
                 
                 messages.forEach(msg => {
-                    addMessage(msg.content, msg.role);
+                    const messageElement = addMessage(msg.content, msg.role);
+                    
+                    // 如果是assistant消息且有推荐商品，显示商品卡片
+                    if (msg.role === 'assistant' && msg.products && msg.products.length > 0) {
+                        showRecommendedProducts(msg.products);
+                    }
                 });
             })
             .catch(error => {

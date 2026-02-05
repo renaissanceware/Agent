@@ -50,9 +50,12 @@ def chat():
 
         # 记录对话到数据库
         log_conversation(session['user_id'], 'user', user_question, session['user_id'])
-        log_conversation(session['user_id'], 'assistant', result['reply'], session['user_id'])
+        
+        # 保存推荐商品信息
+        products = result.get('products', [])
+        log_conversation(session['user_id'], 'assistant', result['reply'], session['user_id'], products)
 
-        session['last_recommendations'] = [p['id'] for p in result.get('products', [])]
+        session['last_recommendations'] = [p['id'] for p in products]
         
         if len(session['conversation_history']) > 40:
             session['conversation_history'] = session['conversation_history'][-40:]

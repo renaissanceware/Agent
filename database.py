@@ -2,6 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 import datetime
 import uuid
+import json
 
 def create_connection():
     """
@@ -28,10 +29,12 @@ def create_tables():
     """
     connection = create_connection()
     if connection is None:
+        print("Connection is None, cannot create tables")
         return False
     
     try:
         cursor = connection.cursor()
+        print("Cursor created successfully")
         
         # 创建conversations表
         create_conversations_table = """
@@ -43,7 +46,9 @@ def create_tables():
             last_message TEXT
         )
         """
+        print("Executing create conversations table")
         cursor.execute(create_conversations_table)
+        print("Conversations table created or exists")
         
         # 创建messages表
         create_messages_table = """
@@ -53,11 +58,14 @@ def create_tables():
             user_id VARCHAR(36) NOT NULL,
             role ENUM('user', 'assistant') NOT NULL,
             content TEXT NOT NULL,
+            products JSON,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (conversation_id) REFERENCES conversations(conversation_id) ON DELETE CASCADE
         )
         """
+        print("Executing create messages table")
         cursor.execute(create_messages_table)
+        print("Messages table created or exists")
         
         connection.commit()
         print('Tables created successfully')
@@ -69,8 +77,9 @@ def create_tables():
         if connection.is_connected():
             cursor.close()
             connection.close()
+            print("Connection closed")
 
-def log_conversation(user_id, role, content, conversation_id=None):
+def log_conversation(user_id, role, content, conversation_id=None, products=None):
     """
     记录对话消息到数据库
     """
@@ -106,11 +115,15 @@ def log_conversation(user_id, role, content, conversation_id=None):
         
         # 创建消息记录
         message_id = str(uuid.uuid4())
+        
+        # 将products转换为JSON字符串
+        products_json = json.dumps(products) if products else None
+        
         insert_message = """
-        INSERT INTO messages (message_id, conversation_id, user_id, role, content)
-        VALUES (%s, %s, %s, %s, %s)
+        INSERT INTO messages (message_id, conversation_id, user_id, role, content, products)
+        VALUES (%s, %s, %s, %s, %s, %s)
         """
-        cursor.execute(insert_message, (message_id, conversation_id, user_id, role, content))
+        cursor.execute(insert_message, (message_id, conversation_id, user_id, role, content, products_json))
         
         connection.commit()
         return True
@@ -162,13 +175,23 @@ def get_conversation_history(conversation_id):
         cursor = connection.cursor(dictionary=True)
         
         get_messages = """
-        SELECT message_id, conversation_id, user_id, role, content, created_at
+        SELECT message_id, conversation_id, user_id, role, content, products, created_at
         FROM messages
         WHERE conversation_id = %s
         ORDER BY created_at ASC
         """
         cursor.execute(get_messages, (conversation_id,))
         messages = cursor.fetchall()
+        
+        # 将JSON字符串转换为Python对象
+        for msg in messages:
+            if msg.get('products'):
+                try:
+                    msg['products'] = json.loads(msg['products'])
+                except (json.JSONDecodeError, TypeError):
+                    msg['products'] = None
+            else:
+                msg['products'] = None
         
         return messages
     except Error as e:
