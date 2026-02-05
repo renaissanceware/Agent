@@ -163,9 +163,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     convItem.className = 'chat-history-item';
                     convItem.dataset.conversationId = conv.conversation_id;
                     
-                    // 格式化时间
+                    // 格式化时间为YYYY-MM-DD HH:mm:ss格式
                     const date = new Date(conv.created_at);
-                    const formattedDate = date.toLocaleString();
+                    const year = date.getFullYear();
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const day = String(date.getDate()).padStart(2, '0');
+                    const hours = String(date.getHours()).padStart(2, '0');
+                    const minutes = String(date.getMinutes()).padStart(2, '0');
+                    const seconds = String(date.getSeconds()).padStart(2, '0');
+                    const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                     
                     convItem.innerHTML = `
                         <div class="chat-history-item-content">
