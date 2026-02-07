@@ -72,6 +72,21 @@
             overflow: hidden;
         }
 
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .sidebar-section:nth-child(3) {
+            flex: 1;
+        }
+
+        .sidebar-section:nth-child(3) > div:nth-child(3) {
+            flex: 1;
+            overflow-y: auto;
+        }
+
         .sidebar-header {
             padding: 1.5rem;
             border-bottom: 1px solid var(--border-color);
