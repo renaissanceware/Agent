@@ -196,6 +196,13 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (!e.target.closest('.delete-conv-btn')) {
                             const convId = this.dataset.conversationId;
                             loadConversation(convId);
+                            
+                            // 移除所有对话历史项的active类
+                            document.querySelectorAll('.chat-history-item').forEach(item => {
+                                item.classList.remove('active');
+                            });
+                            // 给当前点击的对话历史项添加active类
+                            this.classList.add('active');
                         }
                     });
                     
